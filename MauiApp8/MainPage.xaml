@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp8.MainPage">
+
+
+    <ContentPage.Content>
+
+        <Grid Margin="0,0,0,0"
+			  Padding="0,10,0,0"
+			  RowSpacing="10"
+			  ColumnSpacing="0"
+			  RowDefinitions = "90, 90, 90, 90, 90, *, 25"
+			  ColumnDefinitions ="1*, 1*">
+
+
+
+            <Grid Grid.Row="0" Grid.Column="0">
+
+                <Border StrokeThickness="0">
+                    <Border.Shadow>
+                        <Shadow Opacity="1" Radius="10" Offset="0,10">
+                            <Shadow.Brush>
+                                <LinearGradientBrush>
+                                    <GradientStop Offset="0.1" Color="LightGray" />
+                                    <GradientStop Offset="1.0" Color="Gray" />
+                                </LinearGradientBrush>
+                            </Shadow.Brush>
+                        </Shadow>
+                    </Border.Shadow>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                    </Border.StrokeShape>
+                    <Border.Background>
+                        <RadialGradientBrush Center="0.5,0.5">
+                            <GradientStop Offset="0" Color="#253890" />
+                            <GradientStop Offset="0.8" Color="SkyBlue" />
+                        </RadialGradientBrush>
+                    </Border.Background>
+
+                    <Grid ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <BoxView Grid.Column="0" BackgroundColor="#41337A" />
+
+                        <StackLayout Grid.Column="1"
+							 Orientation="Horizontal"
+							 Padding="5,0,0,0"
+							 Spacing="8">
+                            <Image Source="inbound128.png" Aspect="AspectFit"/>
+                            <Label Text="입고" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Black"/>
+                        </StackLayout>
+                    </Grid>
+
+                </Border>
+
+                <!--<custom:PancakeView Margin="{StaticResource ContentPadding}" Style="{StaticResource card}">
+                    <custom:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateCommand}"
+											  CommandParameter="{x:Type vw:Receive.ReceiveMainView}"/>
+                    </custom:PancakeView.GestureRecognizers>
+                    <Grid ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <BoxView Grid.Column="0" BackgroundColor="#41337A" />
+
+                        <StackLayout Grid.Column="1"
+									 Orientation="Horizontal"
+									 Padding="5,0,0,0"
+									 Spacing="8">
+                            <Image Source="inbound128.png" Aspect="AspectFit"/>
+                            <Label Text="입고" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Black"/>
+                        </StackLayout>
+                    </Grid>
+                </custom:PancakeView>-->
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
