@@ -6,20 +6,17 @@
 
     <ContentPage.Content>
 
-        <Grid Margin="0,0,0,0"
+        <Grid Margin="10,0,10,0"
 			  Padding="0,10,0,0"
-			  RowSpacing="10"
-			  ColumnSpacing="0"
+			  RowSpacing="15"
+			  ColumnSpacing="20"
 			  RowDefinitions = "90, 90, 90, 90, 90, *, 25"
 			  ColumnDefinitions ="1*, 1*">
 
-
-
             <Grid Grid.Row="0" Grid.Column="0">
-
-                <Border StrokeThickness="0">
+                <Border StrokeThickness="0.4">
                     <Border.Shadow>
-                        <Shadow Opacity="1" Radius="10" Offset="0,10">
+                        <Shadow Opacity="1" Radius="100" Offset="15, 15">
                             <Shadow.Brush>
                                 <LinearGradientBrush>
                                     <GradientStop Offset="0.1" Color="LightGray" />
@@ -29,14 +26,14 @@
                         </Shadow>
                     </Border.Shadow>
                     <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                        <RoundRectangle CornerRadius="10, 10, 10, 10" />
                     </Border.StrokeShape>
-                    <Border.Background>
+                    <!--<Border.Background>
                         <RadialGradientBrush Center="0.5,0.5">
                             <GradientStop Offset="0" Color="#253890" />
                             <GradientStop Offset="0.8" Color="SkyBlue" />
                         </RadialGradientBrush>
-                    </Border.Background>
+                    </Border.Background>-->
 
                     <Grid ColumnSpacing="0">
                         <Grid.ColumnDefinitions>
@@ -46,21 +43,40 @@
                         <BoxView Grid.Column="0" BackgroundColor="#41337A" />
 
                         <StackLayout Grid.Column="1"
-							 Orientation="Horizontal"
-							 Padding="5,0,0,0"
-							 Spacing="8">
-                            <Image Source="inbound128.png" Aspect="AspectFit"/>
+                                     Orientation="Horizontal"
+                                     Padding="5,0,0,0"
+                                     Spacing="5">
+                            <Image Source="inbound128.png" Aspect="AspectFit" WidthRequest="48" HeightRequest="48"/>
                             <Label Text="입고" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Black"/>
                         </StackLayout>
                     </Grid>
 
                 </Border>
+            </Grid>
 
-                <!--<custom:PancakeView Margin="{StaticResource ContentPadding}" Style="{StaticResource card}">
-                    <custom:PancakeView.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding NavigateCommand}"
-											  CommandParameter="{x:Type vw:Receive.ReceiveMainView}"/>
-                    </custom:PancakeView.GestureRecognizers>
+
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Border StrokeThickness="0.4">
+                    <Border.Shadow>
+                        <Shadow Opacity="1" Radius="100" Offset="15,15">
+                            <Shadow.Brush>
+                                <LinearGradientBrush>
+                                    <GradientStop Offset="0.1" Color="LightGray" />
+                                    <GradientStop Offset="1.0" Color="Gray" />
+                                </LinearGradientBrush>
+                            </Shadow.Brush>
+                        </Shadow>
+                    </Border.Shadow>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10, 10, 10, 15" />
+                    </Border.StrokeShape>
+                    <!--<Border.Background>
+                        <RadialGradientBrush Center="0.5,0.5">
+                            <GradientStop Offset="0" Color="#253890" />
+                            <GradientStop Offset="0.8" Color="SkyBlue" />
+                        </RadialGradientBrush>
+                    </Border.Background>-->
+
                     <Grid ColumnSpacing="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="12" />
@@ -69,14 +85,98 @@
                         <BoxView Grid.Column="0" BackgroundColor="#41337A" />
 
                         <StackLayout Grid.Column="1"
-									 Orientation="Horizontal"
-									 Padding="5,0,0,0"
-									 Spacing="8">
-                            <Image Source="inbound128.png" Aspect="AspectFit"/>
+                                     Orientation="Horizontal"
+                                     Padding="5,0,0,0"
+                                     Spacing="5">
+                            <Image Source="inbound128.png" Aspect="AspectFit" WidthRequest="48" HeightRequest="48"/>
                             <Label Text="입고" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Black"/>
                         </StackLayout>
                     </Grid>
-                </custom:PancakeView>-->
+
+                </Border>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Border StrokeThickness="0.4">
+                    <Border.Shadow>
+                        <Shadow Opacity="1" Radius="100" Offset="15,15">
+                            <Shadow.Brush>
+                                <LinearGradientBrush>
+                                    <GradientStop Offset="0.1" Color="LightGray" />
+                                    <GradientStop Offset="1.0" Color="Gray" />
+                                </LinearGradientBrush>
+                            </Shadow.Brush>
+                        </Shadow>
+                    </Border.Shadow>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10, 10, 10, 10" />
+                    </Border.StrokeShape>
+                    <!--<Border.Background>
+                        <RadialGradientBrush Center="0.5,0.5">
+                            <GradientStop Offset="0" Color="#253890" />
+                            <GradientStop Offset="0.8" Color="SkyBlue" />
+                        </RadialGradientBrush>
+                    </Border.Background>-->
+
+                    <Grid ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <BoxView Grid.Column="0" BackgroundColor="#41337A" />
+
+                        <StackLayout Grid.Column="1"
+                                     Orientation="Horizontal"
+                                     Padding="5,0,0,0"
+                                     Spacing="5">
+                            <Image Source="inbound128.png" Aspect="AspectFit" WidthRequest="48" HeightRequest="48"/>
+                            <Label Text="입고" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Black"/>
+                        </StackLayout>
+                    </Grid>
+
+                </Border>
+            </Grid>
+
+
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Border StrokeThickness="0.4">
+                    <Border.Shadow>
+                        <Shadow Opacity="1" Radius="100" Offset="15,15">
+                            <Shadow.Brush>
+                                <LinearGradientBrush>
+                                    <GradientStop Offset="0.1" Color="LightGray" />
+                                    <GradientStop Offset="1.0" Color="Gray" />
+                                </LinearGradientBrush>
+                            </Shadow.Brush>
+                        </Shadow>
+                    </Border.Shadow>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10, 10, 10, 15" />
+                    </Border.StrokeShape>
+                    <!--<Border.Background>
+                        <RadialGradientBrush Center="0.5,0.5">
+                            <GradientStop Offset="0" Color="#253890" />
+                            <GradientStop Offset="0.8" Color="SkyBlue" />
+                        </RadialGradientBrush>
+                    </Border.Background>-->
+
+                    <Grid ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <BoxView Grid.Column="0" BackgroundColor="#41337A" />
+
+                        <StackLayout Grid.Column="1"
+                                     Orientation="Horizontal"
+                                     Padding="5,0,0,0"
+                                     Spacing="5">
+                            <Image Source="inbound128.png" Aspect="AspectFit" WidthRequest="48" HeightRequest="48"/>
+                            <Label Text="입고" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Black"/>
+                        </StackLayout>
+                    </Grid>
+
+                </Border>
             </Grid>
 
         </Grid>
