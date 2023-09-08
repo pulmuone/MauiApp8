@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using CommunityToolkit.Maui.Markup;
+using Microsoft.Maui.Controls;
+using System.Diagnostics;
 
 namespace MauiApp8
 {
@@ -23,16 +25,47 @@ namespace MauiApp8
             sb.AppendLine($"Rotation: {DeviceDisplay.Current.MainDisplayInfo.Rotation}");
             sb.AppendLine($"Refresh Rate: {DeviceDisplay.Current.MainDisplayInfo.RefreshRate}");
 
+            RowDefinitionCollection rowDefinitions;
 
-            //if (DeviceDisplay.Current.MainDisplayInfo.Width >= 1080 || DeviceDisplay.Current.MainDisplayInfo.Height >= 2400)
-            //{
-            //    ImgInbound.WidthRequest = 48;
-            //}
-            //else
-            //{
-            //    //작게 표시
-            //    ImgInbound.WidthRequest = 32;
-            //}
+            if (DeviceDisplay.Current.MainDisplayInfo.Width >= 1080 || DeviceDisplay.Current.MainDisplayInfo.Height >= 2400)
+            {
+                rowDefinitions = new()
+                {
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = GridLength.Star }, //FHD+ 해상도 2400x1080 해상도에서는 더미를 하나 추가한다.
+                    new RowDefinition { Height = new GridLength(30, GridUnitType.Absolute) }
+                };
+            }
+            else
+            {
+                rowDefinitions = new()
+                {
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = new GridLength(30, GridUnitType.Absolute) }
+                };
+            }
+
+            this.grid.RowDefinitions = rowDefinitions;
+
+            Label label = new()
+            {
+                Text = "Version 1.2.3",
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.End
+            };
+            label.ColumnSpan(2);
+            label.Column(0);
+            label.Row(rowDefinitions.Count);
+
+            this.grid.Add(label);
         }
     }
 }

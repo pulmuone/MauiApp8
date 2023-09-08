@@ -5,11 +5,11 @@
 
 	<ContentPage.Content>
 
-		<Grid Margin="10,0,10,0"
+		<Grid x:Name="grid"
+			  Margin="10,0,10,0"
 			  Padding="0,10,0,0"
 			  RowSpacing="10"
 			  ColumnSpacing="15"
-			  RowDefinitions = "*, *, *, *, *, *, 25"
 			  ColumnDefinitions ="*, *">
 
 			<Grid Grid.Row="0" Grid.Column="0">
@@ -27,14 +27,14 @@
 					<Border.StrokeShape>
 						<RoundRectangle CornerRadius="10, 10, 10, 15" />
 					</Border.StrokeShape>
-                    <!--<Border.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding NavigateCommand}"
-                                              NumberOfTapsRequired="1"
+					<!--<Border.GestureRecognizers>
+						<TapGestureRecognizer Command="{Binding NavigateCommand}"
+											  NumberOfTapsRequired="1"
 											  CommandParameter="{x:Type vw:Receive.ReceiveMainView}"/>
-                    </Border.GestureRecognizers>-->
+					</Border.GestureRecognizers>-->
 
 
-                    <Grid ColumnSpacing="0">
+					<Grid ColumnSpacing="0">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="12" />
 							<ColumnDefinition Width="*" />
