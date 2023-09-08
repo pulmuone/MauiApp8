@@ -4,9 +4,11 @@
     {
         public App()
         {
+            Application.Current.UserAppTheme = AppTheme.Light;
+
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
     }
 }

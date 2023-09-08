@@ -49,7 +49,34 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\barcode36x36.png" />
+	  <None Remove="Resources\Images\cust64.png" />
+	  <None Remove="Resources\Images\cyclecount128.png" />
+	  <None Remove="Resources\Images\delete32.png" />
+	  <None Remove="Resources\Images\erase64.png" />
+	  <None Remove="Resources\Images\excel64.png" />
+	  <None Remove="Resources\Images\export64.png" />
+	  <None Remove="Resources\Images\grid128.png" />
+	  <None Remove="Resources\Images\gridcv128.png" />
+	  <None Remove="Resources\Images\id64.png" />
 	  <None Remove="Resources\Images\inbound128.png" />
+	  <None Remove="Resources\Images\keyboardoff64.png" />
+	  <None Remove="Resources\Images\keyboardon128.png" />
+	  <None Remove="Resources\Images\keyboardon64.png" />
+	  <None Remove="Resources\Images\kit128.png" />
+	  <None Remove="Resources\Images\logo.jpg" />
+	  <None Remove="Resources\Images\logout128.png" />
+	  <None Remove="Resources\Images\move128.png" />
+	  <None Remove="Resources\Images\outbound128.png" />
+	  <None Remove="Resources\Images\password64.png" />
+	  <None Remove="Resources\Images\pda64.png" />
+	  <None Remove="Resources\Images\pick128.png" />
+	  <None Remove="Resources\Images\replenish128.png" />
+	  <None Remove="Resources\Images\scanner128.png" />
+	  <None Remove="Resources\Images\scanner64.png" />
+	  <None Remove="Resources\Images\setting128.png" />
+	  <None Remove="Resources\Images\setting64.png" />
+	  <None Remove="Resources\Images\warehouse128.png" />
 	</ItemGroup>
 
 	<ItemGroup>
