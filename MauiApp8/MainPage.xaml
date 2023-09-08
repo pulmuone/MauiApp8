@@ -27,8 +27,14 @@
 					<Border.StrokeShape>
 						<RoundRectangle CornerRadius="10, 10, 10, 15" />
 					</Border.StrokeShape>
+                    <!--<Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateCommand}"
+                                              NumberOfTapsRequired="1"
+											  CommandParameter="{x:Type vw:Receive.ReceiveMainView}"/>
+                    </Border.GestureRecognizers>-->
 
-					<Grid ColumnSpacing="0">
+
+                    <Grid ColumnSpacing="0">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="12" />
 							<ColumnDefinition Width="*" />
